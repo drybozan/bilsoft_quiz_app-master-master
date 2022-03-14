@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "982819803309",
+    "project_id": "bilsoftquizapp-cf552",
+    "storage_bucket": "bilsoftquizapp-cf552.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982819803309:android:0ef1a3e6efd2a29111f624",
+        "android_client_info": {
+          "package_name": "com.example.quiz_app_bilsoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982819803309-rd2cn7bdq5rhdtsuee5vjunmad98rrml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDETZingxuIJFjALTrZOXm6W9ViHyEFqk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982819803309-rd2cn7bdq5rhdtsuee5vjunmad98rrml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
