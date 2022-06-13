@@ -21,8 +21,8 @@ class HomeCategory extends StatelessWidget {
              Navigator.push(context,MaterialPageRoute(builder: (context) => album.goTo));
           },
             child: Container(
-              height: 168,
-              width: 175,
+              height: 147,
+              width: 168,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: album.color,

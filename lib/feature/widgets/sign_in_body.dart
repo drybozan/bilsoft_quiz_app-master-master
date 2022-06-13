@@ -14,7 +14,7 @@ class SignInBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: SizedBox(
-        height: 650,
+        height: 735,
         width: 500,
         child: Stack(
           children: [
@@ -57,11 +57,17 @@ class SignInBody extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap:(){
-                          Navigator.push(context,MaterialPageRoute(builder: (context) => const HomePage()));
+                         loginUserEmailAndPassword();
                         },
-                        child: appFieldButton(text: 'Giriş Yap')
+                        child: appFieldButton(text: 'Giriş Yap'),
+                         
                         ),
-                        appFieldButton(text: 'Misafir girişi'),
+                        GestureDetector(
+                          onTap:((){
+                            _misafirGirisi();
+                          }),
+                          child: appFieldButton(text: 'Misafir girişi')
+                          ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -91,8 +97,17 @@ class SignInBody extends StatelessWidget {
     );
   }
 
-  void _misafirGirisi() async{
-    UserCredential sonuc = await FirebaseAuth.instance.signInAnonymously();
-   print('Oturum açan user id : ' +sonuc.user!.uid.toString());
+   void _misafirGirisi() async{
+     UserCredential sonuc = await FirebaseAuth.instance.signInAnonymously();
+    print('Oturum açan user id : ' +sonuc.user!.uid.toString());
+   }
+}
+
+void loginUserEmailAndPassword() async {
+  try {
+        UserCredential _userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email:"ayse@gmail.com", password:"ayse123");
+
+  } catch (e) {
+    print(e.toString());
   }
 }

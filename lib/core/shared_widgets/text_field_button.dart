@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class textFieldButton extends StatelessWidget {
   const textFieldButton({
-    Key? key,required this.text,required this.preIcon, this.suffIcon,
+    Key? key,required this.text,required this.preIcon, this.suffIcon, this.textController, 
   }) : super(key: key);
 
   final String text;
   final Icon preIcon; 
   final Icon? suffIcon; 
+  final TextEditingController? textController;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,7 @@ class textFieldButton extends StatelessWidget {
             filled: true, //tüm alanı boya
             
             ),
+            controller: textController,
     
     );
   }

@@ -15,14 +15,15 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: SizedBox(
-        height: 700,
+        height: 800,
+        
         child: Consumer<HomeProvider>(
           builder:
               (BuildContext context, HomeProvider homeProvider, Widget? child) {
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisSpacing: 1,
-                mainAxisSpacing: 1,
+                crossAxisSpacing: 0.5,
+                mainAxisSpacing: 0.5,
                 crossAxisCount: 2,
                 childAspectRatio: 1,
               ),

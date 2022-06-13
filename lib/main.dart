@@ -6,14 +6,17 @@ import 'package:bilsoft_quiz_app/feature/screens/sign_in.dart';
 import 'package:bilsoft_quiz_app/feature/screens/test_starting_page.dart';
 import 'package:bilsoft_quiz_app/feature/screens/turkish_page.dart';
 import 'package:bilsoft_quiz_app/feature/viewmodel/home_provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'feature/screens/sign_up.dart';
 import 'feature/screens/test_finishing_page.dart';
 
-void main() {
-  runApp(
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(    
     MultiProvider(
       providers: [
         ChangeNotifierProvider<HomeProvider>(
@@ -21,6 +24,7 @@ void main() {
       ],
       child: const MyApp(),
     ),
+
   );
 }
 
